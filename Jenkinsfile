@@ -3,9 +3,8 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'sudo apt update -y'
-        sh 'sudo apt install python3-pip'
-        sh 'sudo pip install flask'
+        sh 'apt install python3-pip'
+        sh 'pip install flask'
         
       }
     }
