@@ -1,10 +1,8 @@
 pipeline {
-  agent { docker { image 'python:3.9.4' } }
+  agent { docker { image 'python:2-alpine' } }
   stages {
     stage('build') {
       steps {
-        sh 'virtualenv enviroment_name -p python3'
-        sh 'source enviroment_name/bin/activate'
         sh 'pip install --upgrade pip'
         sh 'pip install -r requirements.txt'
       }
