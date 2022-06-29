@@ -1,9 +1,12 @@
 pipeline {
-  agent { docker { image 'python:latest' } }
+  agent { docker { image 'ubuntu:latest' } }
   stages {
     stage('build') {
       steps {
-        sh 'sleep 10'
+        sh 'sudo apt update -y'
+        sh 'sudo apt install python3-pip'
+        sh 'sudo pip install flask'
+        
       }
     }
     stage('test') {
