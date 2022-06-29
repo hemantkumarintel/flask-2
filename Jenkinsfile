@@ -3,8 +3,10 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'sudo -H pip install --upgrade pip'
-        sh 'sudo -H pip install -r requirements.txt'
+        sh 'virtualenv enviroment_name -p python3'
+        sh 'source enviroment_name/bin/activate'
+        sh 'pip install --upgrade pip'
+        sh 'pip install -r requirements.txt'
       }
     }
     stage('test') {
