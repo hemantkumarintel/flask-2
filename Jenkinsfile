@@ -4,7 +4,8 @@ pipeline {
     stage('build') {
       steps {
 //         sh 'pip3 install --upgrade pip'
-        sh 'pip3 install -r requirements.txt'
+//         sh 'pip3 install -r requirements.txt'
+           sh 'pip install itsdangerous==1.1.0 --user'
       }
     }
     stage('test') {
