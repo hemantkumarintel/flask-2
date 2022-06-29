@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'chown $USER /.cache/pip'
+        sh 'chown -R $USER /Users/$USER/Library/Caches/pip'
         sh 'pip install --user virtualenv'
         
       }
