@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'pip3 install --user --upgrade pip'
-        sh 'pip3 install --user -r requirements.txt'
+        sh 'sleep 10'
       }
     }
     stage('test') {
