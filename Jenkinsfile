@@ -1,9 +1,9 @@
 pipeline {
-  agent { docker { image 'python:3-alpine' } }
+  agent { docker { image 'python:latest' } }
   stages {
     stage('build') {
       steps {
-        sh 'sudo -H pip install flask'
+        sh 'pip install --user virtualenv'
         
       }
     }
